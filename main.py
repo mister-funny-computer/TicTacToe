@@ -62,11 +62,42 @@ for i in range(1, 10):
         print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
         break
 
+    if area[1][0] == "0" and area[1][1] == "0" and area[1][2] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        break
+
+    if area[2][0] == "0" and area[2][1] == "0" and area[2][2] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        break
+
     if area[0][0] == "0" and area[1][0] == "0" and area[2][0] == "0":
         print("Нолики победили!!!!!!!!!")
         break
 
+    if area[0][1] == "0" and area[1][1] == "0" and area[2][1] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        break
+
+    if area[0][2] == "0" and area[1][2] == "0" and area[2][2] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        break
+
+    if area[0][2] == "0" and area[1][1] == "0" and area[2][0] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        break
+
+    if area[0][0] == "0" and area[1][1] == "0" and area[2][2] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        break
+
+
+
+
     if area[2][0] == "X" and area[1][1] == "X" and area[0][2] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        break
+
+    if area[0][0] == "X" and area[1][1] == "X" and area[2][2] == "X":
         print("Крестики победили!!!!!!!!!!")
         break
 
@@ -74,4 +105,23 @@ for i in range(1, 10):
         print("Крестики победили!!!!!!!!!!!")
         break
 
+    if area[0][0] == "X" and area[1][0] == "X" and area[2][0] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        break
+
+    if area[0][2] == "X" and area[1][2] == "X" and area[2][2] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        break
+
+    if area[0][0] == "X" and area[0][1] == "X" and area[0][2] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        break
+
+    if area[1][0] == "X" and area[1][1] == "X" and area[1][2]:
+        print("Крестики победили!!!!!!!!!!")
+        break
+
+    if area[2][0] == "X" and area[2][1] == "X" and area[2][2]:
+        print("Крестики победили!!!!!!!!!!")
+        break
 
