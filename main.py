@@ -117,11 +117,11 @@ for i in range(1, 10):
         print("Крестики победили!!!!!!!!!!")
         break
 
-    if area[1][0] == "X" and area[1][1] == "X" and area[1][2]:
+    if area[1][0] == "X" and area[1][1] == "X" and area[1][2] == "X":
         print("Крестики победили!!!!!!!!!!")
         break
 
-    if area[2][0] == "X" and area[2][1] == "X" and area[2][2]:
+    if area[2][0] == "X" and area[2][1] == "X" and area[2][2] == "X":
         print("Крестики победили!!!!!!!!!!")
         break
 
