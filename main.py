@@ -20,6 +20,75 @@ area = [
     ["*", "*", "*"]
 ]
 
+def check_winner():
+
+    if area[0][0] == "0" and area[0][1] == "0" and area[0][2] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        return "0"
+
+    if area[1][0] == "0" and area[1][1] == "0" and area[1][2] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        return "0"
+
+    if area[2][0] == "0" and area[2][1] == "0" and area[2][2] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        return "0"
+
+    if area[0][0] == "0" and area[1][0] == "0" and area[2][0] == "0":
+        print("Нолики победили!!!!!!!!!")
+        return "0"
+
+    if area[0][1] == "0" and area[1][1] == "0" and area[2][1] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        return "0"
+
+    if area[0][2] == "0" and area[1][2] == "0" and area[2][2] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        return "0"
+
+    if area[0][2] == "0" and area[1][1] == "0" and area[2][0] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        return "0"
+
+    if area[0][0] == "0" and area[1][1] == "0" and area[2][2] == "0":
+        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+        return "0"
+
+    if area[2][0] == "X" and area[1][1] == "X" and area[0][2] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        return "X"
+
+    if area[0][0] == "X" and area[1][1] == "X" and area[2][2] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        return "X"
+
+    if area[0][1] == "X" and area[1][1] == "X" and area[2][1] == "X":
+        print("Крестики победили!!!!!!!!!!!")
+        return "X"
+
+    if area[0][0] == "X" and area[1][0] == "X" and area[2][0] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        return "X"
+
+    if area[0][2] == "X" and area[1][2] == "X" and area[2][2] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        return "X"
+
+    if area[0][0] == "X" and area[0][1] == "X" and area[0][2] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        return "X"
+
+    if area[1][0] == "X" and area[1][1] == "X" and area[1][2] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        return "X"
+
+    if area[2][0] == "X" and area[2][1] == "X" and area[2][2] == "X":
+        print("Крестики победили!!!!!!!!!!")
+        return "X"
+
+    return "*"
+
+
 def print_area():
     print()
     print("|-------|")
@@ -55,73 +124,14 @@ for i in range(1, 10):
 
     print_area()
 
-    #if area[1][1] == "X":
-        #print("По центру крестик !!!!!!")
+    winner = check_winner()
 
-    if area[0][0] == "0" and area[0][1] == "0" and area[0][2] == "0":
-        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+    if winner == "0" or  winner == "X":
         break
 
-    if area[1][0] == "0" and area[1][1] == "0" and area[1][2] == "0":
-        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
-        break
-
-    if area[2][0] == "0" and area[2][1] == "0" and area[2][2] == "0":
-        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
-        break
-
-    if area[0][0] == "0" and area[1][0] == "0" and area[2][0] == "0":
-        print("Нолики победили!!!!!!!!!")
-        break
-
-    if area[0][1] == "0" and area[1][1] == "0" and area[2][1] == "0":
-        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
-        break
-
-    if area[0][2] == "0" and area[1][2] == "0" and area[2][2] == "0":
-        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
-        break
-
-    if area[0][2] == "0" and area[1][1] == "0" and area[2][0] == "0":
-        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
-        break
-
-    if area[0][0] == "0" and area[1][1] == "0" and area[2][2] == "0":
-        print("Нолики победели!!!!!!!!!!!!!!!!!!!!!")
+    if i == 9 and winner == "*":
+        print("Ничья")
         break
 
 
-
-
-    if area[2][0] == "X" and area[1][1] == "X" and area[0][2] == "X":
-        print("Крестики победили!!!!!!!!!!")
-        break
-
-    if area[0][0] == "X" and area[1][1] == "X" and area[2][2] == "X":
-        print("Крестики победили!!!!!!!!!!")
-        break
-
-    if area[0][1] == "X" and area[1][1] == "X" and area[2][1] == "X":
-        print("Крестики победили!!!!!!!!!!!")
-        break
-
-    if area[0][0] == "X" and area[1][0] == "X" and area[2][0] == "X":
-        print("Крестики победили!!!!!!!!!!")
-        break
-
-    if area[0][2] == "X" and area[1][2] == "X" and area[2][2] == "X":
-        print("Крестики победили!!!!!!!!!!")
-        break
-
-    if area[0][0] == "X" and area[0][1] == "X" and area[0][2] == "X":
-        print("Крестики победили!!!!!!!!!!")
-        break
-
-    if area[1][0] == "X" and area[1][1] == "X" and area[1][2] == "X":
-        print("Крестики победили!!!!!!!!!!")
-        break
-
-    if area[2][0] == "X" and area[2][1] == "X" and area[2][2] == "X":
-        print("Крестики победили!!!!!!!!!!")
-        break
-
+print("Внимание говорит Москва Игра окончена")
