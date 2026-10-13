@@ -1,25 +1,3 @@
-area = ["*", "*", "*"]
-
-#print(area)
-
-area[1] = "X"
-area[2] = "0"
-
-for cell in area:
-    #print(cell, end=" ")
-    pass
-
-print()
-print()
-
-
-
-area = [
-    ["*", "*", "*"],
-    ["*", "*", "*"],
-    ["*", "*", "*"]
-]
-
 def check_winner():
 
     if area[0][0] == "0" and area[0][1] == "0" and area[0][2] == "0":
@@ -88,7 +66,6 @@ def check_winner():
 
     return "*"
 
-
 def print_area():
     print()
     print("|-------|")
@@ -100,14 +77,15 @@ def print_area():
     print("|-------|")
     print()
 
-#area[2][2] = "X"
-
-#row = area[1]
-#row[1] = "0"
-
-print_area()
+area = [
+    ["*", "*", "*"],
+    ["*", "*", "*"],
+    ["*", "*", "*"]
+]
 
 move = "X"
+
+print_area()
 
 for i in range(1, 10):
     if i % 2 == 0:
@@ -120,7 +98,11 @@ for i in range(1, 10):
     row = int(input("Введите индекс строки (1 строчка - 0, 2 строчка - 1, 3 строчка - 2): "))
     column = int(input("Введите индекс столбца (1 столбец - 0, 2 столбец - 1, 3 столбец - 2): "))
 
-    area[row][column] = move
+    if area[row][column] == "*":
+        area[row][column] = move
+    else:
+        print("\nЭто ячейка занята, не получится походить. Вы пропускаете ход.")
+
 
     print_area()
 
