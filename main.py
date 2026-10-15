@@ -1,3 +1,9 @@
+def super_check_winner():
+    for i in range(3):
+        if area[0][0] == area[0][1] == area[0][2]:
+            print(f"Победа {area[0][0]}")
+            return area[0][0]
+
 def check_winner():
 
     if area[0][0] == "0" and area[0][1] == "0" and area[0][2] == "0":
@@ -106,7 +112,7 @@ for i in range(1, 10):
 
     print_area()
 
-    winner = check_winner()
+    winner = super_check_winner()
 
     if winner == "0" or  winner == "X":
         break
